@@ -1,0 +1,14 @@
+<div class="modal" [ngStyle]="{'top': event?.verticalOffset}">
+  <div class="modal-content">
+    <img src="{{event.photo}}" width="100px" height="100px">
+
+    <div class="content">
+      <div class="title">{{event?.title}}</div>
+      <div class="date">{{getDate()}}</div>
+      <div class="start">Start: {{getStart()}}</div>
+      <div class="end">End: {{getEnd()}}</div>
+      <div class="info">Click on the cercle to open event page</div>
+    </div>
+    
+  </div>
+</div>

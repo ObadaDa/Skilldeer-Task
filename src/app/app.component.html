@@ -1,0 +1,61 @@
+<div class="wrapper">
+  <main>
+    <div class="toolbar">
+      <div class="prev"><i class="fa fa-chevron-left" (click)="prevWeek()"></i></div>
+      <div class="current-week">{{weekStartDate}} to {{weekEndDate}}</div>
+      <div class="next"><i class="fa fa-chevron-right" (click)="nextWeek()"></i></div>
+    </div>
+    <div class="calendar">
+      <div class="calendar_header">
+        <div></div>
+        <div class="day">sun</div>
+        <div class="day">mon</div>
+        <div class="day">tue</div>
+        <div class="day">wed</div>
+        <div class="day">thu</div>
+        <div class="day">fri</div>
+        <div class="day">sat</div>
+      </div>
+
+      <div class="calendar_body">
+        <div class="calendar_hours">
+          <div class="hour">00:00</div>
+          <div class="hour">01:00</div>
+          <div class="hour">02:00</div>
+          <div class="hour">03:00</div>
+          <div class="hour">04:00</div>
+          <div class="hour">05:00</div>
+          <div class="hour">06:00</div>
+          <div class="hour">07:00</div>
+          <div class="hour">08:00</div>
+          <div class="hour">09:00</div>
+          <div class="hour">10:00</div>
+          <div class="hour">11:00</div>
+          <div class="hour">12:00</div>
+          <div class="hour">13:00</div>
+          <div class="hour">14:00</div>
+          <div class="hour">15:00</div>
+          <div class="hour">16:00</div>
+          <div class="hour">17:00</div>
+          <div class="hour">18:00</div>
+          <div class="hour">19:00</div>
+          <div class="hour">20:00</div>
+          <div class="hour">21:00</div>
+          <div class="hour">22:00</div>
+          <div class="hour">23:00</div>
+        </div>
+  
+        <div class="calendar_day">
+          <app-event [events]="sundayList" class="hour_cell"></app-event>
+          <app-event [events]="mondayList" class="hour_cell"></app-event>
+          <app-event [events]="tusdayList" class="hour_cell"></app-event>
+          <app-event [events]="wednesdayList" class="hour_cell"></app-event>
+          <app-event [events]="thursdayList" class="hour_cell"></app-event>
+          <app-event [events]="fridayList" class="hour_cell"></app-event>
+          <app-event [events]="saturdayList" class="hour_cell"></app-event>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>

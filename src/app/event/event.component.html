@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="dayColumn">
+    <div *ngFor="let event of events" >
+      <div class="event" [ngStyle]="{'top': event?.verticalOffset , 'background' : event?.color}" (mouseenter)='event.showModal = true' (mouseleave)='event.showModal = false'(click)="moveToURL(event?.url)"></div>
+      <app-modal [event]="event"  *ngIf="event?.showModal"></app-modal>
+    </div>
+  </div>
+</div>
